@@ -1,0 +1,103 @@
+<!-- <!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion de Stock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Gestion du Stock</h1>
+
+    <form action="stock.php" method="POST">
+      <h2>Choisissez un produit disponible chez le dentiste</h2>
+
+      <label for="produit">Produit :</label>
+      <select name="nom_produit" id="nom_produit" onchange="updatePrice()">
+        <option value="brosse_a_dents">Brosse à dents</option>
+        <option value="dentifrice">Dentifrice</option>
+        <option value="fil_dentaire">Fil dentaire</option>
+        <option value="bain_de_bouche">Bain de bouche</option>
+        <option value="kit_blanchiment">Kit de blanchiment dentaire</option>
+        <option value="gel_dents_sensibles">Gel pour dents sensibles</option>
+        <option value="cire_orthodontique">Cire orthodontique</option>
+        <option value="prothese_dentaire">Prothèse dentaire</option>
+        <option value="implant_dentaire">Implant dentaire</option>
+        <option value="couronne">Couronne dentaire</option>
+        <option value="bridge_dentaire">Bridge dentaire</option>
+        <option value="gel_anesthesique">Gel anesthésique</option>
+        <option value="gants_jetables">Gants jetables</option>
+        <option value="masque_chirurgical">Masque chirurgical</option>
+        <option value="pince_dentaire">Pince dentaire</option>
+        <option value="composite_dentaire">Composite dentaire</option>
+        <option value="ciment_dentaire">Ciment dentaire</option>
+        <option value="detartrage_instruments">
+          Instruments de détartrage
+        </option>
+        <option value="serum_physio">Sérum physiologique</option>
+        <option value="protecteur_dentaire">Préservatif dentaire</option>
+        <option value="mousse_polissage">Mousse de polissage</option>
+      </select>
+      <br /><br />
+
+      <label for="quantite">Quantité :</label><br />
+      <input type="number" id="quantite" name="quantite" required /><br /><br />
+
+      <label for="prix_unitaire">Prix unitaire (en DZD) :</label>
+      <input type="text" id="prix_unitaire" name="prix_unitaire" readonly />
+      <input
+        type="hidden"
+        id="prix_unitaire_hidden"
+        name="prix_unitaire_hidden"
+      />
+
+      <input type="submit" name="add_product" value="Ajouter Produit" />
+    </form>
+
+    <script>
+      // Liste des prix associés aux produits
+      const prix_unitaire = {
+        brosse_a_dents: 200,
+        dentifrice: 150,
+        fil_dentaire: 120,
+        bain_de_bouche: 250,
+        kit_blanchiment: 500,
+        gel_dents_sensibles: 300,
+        cire_orthodontique: 100,
+        prothese_dentaire: 12000,
+        implant_dentaire: 20000,
+        couronne: 8000,
+        bridge_dentaire: 10000,
+        gel_anesthesique: 350,
+        gants_jetables: 50,
+        masque_chirurgical: 80,
+        pince_dentaire: 600,
+        composite_dentaire: 400,
+        ciment_dentaire: 150,
+        detartrage_instruments: 700,
+        serum_physio: 30,
+        protecteur_dentaire: 250,
+        mousse_polissage: 150,
+      };
+
+      function updatePrice() {
+        const nom_produit = document.getElementById("nom_produit").value;
+        const prixInput = document.getElementById("prix_unitaire");
+        const prixHiddenInput = document.getElementById("prix_unitaire_hidden");
+
+        if (prix_unitaire.hasOwnProperty(nom_produit)) {
+          prixInput.value = prix_unitaire[nom_produit] + " DZD";
+          prixHiddenInput.value = prix_unitaire[nom_produit];
+        } else {
+          prixInput.value = "Prix non disponible";
+          prixHiddenInput.value = "";
+        }
+      }
+
+      window.onload = function () {
+        updatePrice();
+      };
+    </script>
+  </body>
+</html>
+-->
